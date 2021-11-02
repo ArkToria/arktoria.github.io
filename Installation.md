@@ -28,7 +28,7 @@ Download installer from [Official Website](https://www.msys2.org/)
  |
  [Tuna Mirror](https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/msys2-x86_64-latest.exe)
 
-##### 1. Install Depends
+##### 1. Install Dependencies
 
 > A package management system called `pacman`, which should be familiar to Arch Linux users, is also the one for MSYS2. But installing the package does not require root privileges.
 
