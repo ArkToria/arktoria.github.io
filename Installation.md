@@ -24,9 +24,9 @@ The minimum required version of Qt for building ACross project is `v6.2.0`. Howe
 
 ##### 0. Install MSYS2
 
-> Download installer from [Official Website](https://www.msys2.org/)
-> |
-> or [Tuna Mirror](https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/msys2-x86_64-latest.exe)
+Download installer from [Official Website](https://www.msys2.org/)
+ |
+ [Tuna Mirror](https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/msys2-x86_64-latest.exe)
 
 ##### 1. Install Depends
 
