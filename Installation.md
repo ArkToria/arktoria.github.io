@@ -33,18 +33,18 @@ Download the installer from [Official Website](https://www.msys2.org/)
 > The package manager called `pacman`, which Arch Linux users should be familiar with, is also the one for MSYS2. But to install packages you do not need root privilege.
 
 ```shell
-$ pacman -S mingw-w64_x86_64-qt6-base \
-    mingw-w64_x86_64-qt6-translations \
-    mingw-w64_x86_64-qt6-imageformats \
-    mingw-w64_x86_64-qt6-5compat \
-    mingw-w64_x86_64-qt6-tools \
-    mingw-w64_x86_64-curl \
-    mingw-w64_x86_64-fmt \
-    mingw-w64_x86_64-spdlog \
-    mingw-w64_x86_64-protobuf \
-    mingw-w64_x86_64-grpc \
-    mingw-w64_x86_64-nlohmann-json \
-    mingw-w64_x86_64-zxing-cpp
+$ pacman -S mingw-w64-x86_64-qt6-base \
+    mingw-w64-x86_64-qt6-translations \
+    mingw-w64-x86_64-qt6-imageformats \
+    mingw-w64-x86_64-qt6-5compat \
+    mingw-w64-x86_64-qt6-tools \
+    mingw-w64-x86_64-curl \
+    mingw-w64-x86_64-fmt \
+    mingw-w64-x86_64-spdlog \
+    mingw-w64-x86_64-protobuf \
+    mingw-w64-x86_64-grpc \
+    mingw-w64-x86_64-nlohmann-json \
+    mingw-w64-x86_64-zxing-cpp
 ```
 
 ##### 2. Build the CMake Project
