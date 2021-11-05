@@ -79,7 +79,7 @@ $ mkdir build && cd build
 $ cmake ../ ^
     -G "Visual Studio 16 2019" ^
     -DCMAKE_BUILD_TYPE=Release ^
-    -DCMAKE_TOOLCHAIN_FILE=<vcpkg Directory> ^
+    -DCMAKE_TOOLCHAIN_FILE=<vcpkg Directory>/scripts/buildsystems/vcpkg.cmake ^
     -DVCPKG_TARGET_TRIPLET=x64-windows
 $ cmake --build .
 ```
