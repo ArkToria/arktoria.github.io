@@ -39,6 +39,51 @@ $ DESTDIR=<installation_directory> cmake --install .
 
 The minimum required version of Qt for building ACross project is `v6.2.0`. However, if you use the official Qt installer, you need at least version `v6.2.1` because of the missing `qt6-5compat` component.
 
+The following commands are all executed in PowerShell.
+
+##### 0. Install vcpkg
+
+###### If you have not installed `vcpkg` before
+
+Clone and bootstrap it by
+
+```powershell
+$ git clone --recursive https://github.com/microsoft/vcpkg.git
+$ ./vcpkg/bootstrap-vcpkg.bat
+```
+
+You can add the `vcpkg` directory to the `PATH` environment variable, or use `vcpkg.exe` with the absolute path later.
+
+###### If you have already installed `vcpkg`
+
+Update it and sources by
+
+```powershell
+$ cd <vcpkg Directory>
+$ git pull
+$ ./vcpkg/bootstrap-vcpkg.bat
+```
+
+##### 1. Install Dependencies
+
+```powershell
+$ cd <ACross Reposotiry>
+$ vcpkg install
+```
+
+##### 2. Build the CMake Project
+
+```powershell
+$ cd <ACross Reposotiry>
+$ mkdir build && cd build
+$ cmake ../ ^
+    -G "Visual Studio 16 2019" ^
+    -DCMAKE_BUILD_TYPE=Release ^
+    -DCMAKE_TOOLCHAIN_FILE=<vcpkg Directory> ^
+    -DVCPKG_TARGET_TRIPLET=x64-windows
+$ cmake --build .
+```
+
 #### MSYS2 + MINGW
 **Recommended:**
 
