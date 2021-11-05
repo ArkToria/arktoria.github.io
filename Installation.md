@@ -2,17 +2,36 @@
 
 ## Pre-built Package
 
-### Arch Linux
+### Releases
+> https://github.com/arktoria/across/releases
 
-- [Arch Linux Github Action](https://github.com/ArkToria/ACross/actions/workflows/arch-build.yaml)
+### Git Version 
+> <div id="across-git-version">v</div>
+
+- [Arch Linux](https://github.com/ArkToria/ACross/actions/workflows/arch-build.yaml)
+
+- [Nix / NixOS](https://github.com/ArkToria/ACross/actions/workflows/nix-build.yaml)
+
+- [Windows x86_64 - MSVC](https://github.com/ArkToria/ACross/actions/workflows/msvc-build.yaml)
+
+- [Windows x86_64 - MSYS2](https://github.com/ArkToria/ACross/actions/workflows/msys2-mingw64-build.yaml)
 
 ## Build From Source
 
 ### Linux
 
-#### Arch Linux
+Please refer to Arch Linux [PKGBUILD](https://github.com/ArkToria/ACross/blob/master/pkgbuild/arch/across-dev-git/PKGBUILD) file for installation dependencies.
 
-- [PKGBUILD](https://github.com/ArkToria/ACross/blob/master/pkgbuild/arch/across-dev-git/PKGBUILD)
+```bash
+$ cd <ACross Reposotiry>
+$ mkdir -p build && cd build
+$ cmake .. \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release \
+    -GNinja
+$ cmake --build .
+$ DESTDIR=<installation_directory> cmake --install .
+```
 
 ### Windows
 
@@ -21,6 +40,19 @@
 The minimum required version of Qt for building ACross project is `v6.2.0`. However, if you use the official Qt installer, you need at least version `v6.2.1` because of the missing `qt6-5compat` component.
 
 #### MSYS2 + MINGW
+**Recommended:**
+
+Build the MSYS2 package from [ACross PKGBUILD](https://github.com/ArkToria/ACross/blob/master/pkgbuild/msys2/PKGBUILD) following to the official tutorial.
+
+> https://www.msys2.org/wiki/Creating-Packages/
+
+```bash
+$ pacman -S base-devel mingw-w64-x86_64-toolchain mingw-w64-x86_64-gcc
+$ cd <ACross Reposotiry>/pkgbuild/msys2/
+$ MINGW_ARCH=mingw64 makepkg-mingw -sCLfi
+```
+
+You can also follow the steps below to build manually:
 
 ##### 0. Install MSYS2
 
@@ -32,7 +64,7 @@ Download the installer from [Official Website](https://www.msys2.org/)
 
 > The package manager called `pacman`, which Arch Linux users should be familiar with, is also the one for MSYS2. But to install packages you do not need root privilege.
 
-```shell
+```bash
 $ pacman -S mingw-w64-x86_64-qt6-base \
     mingw-w64-x86_64-qt6-translations \
     mingw-w64-x86_64-qt6-imageformats \
@@ -51,8 +83,10 @@ $ pacman -S mingw-w64-x86_64-qt6-base \
 
 Open your Mingw-w64 Terminal in Windows Launcher.
 
-```shell
+```bash
 $ mkdir build && cd build
 $ cmake ../ -GNinja -DCMAKE_BUILD_TYPE=Release
 $ cmake --build .
 ```
+
+The `ENABLE_DEPLOYMENT` option is `ON` by default, this will copy the required resources (including the `*.dll`) to the compiled directory. 

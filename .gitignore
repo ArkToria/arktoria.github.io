@@ -130,3 +130,6 @@ web_modules/
 // *.css.map
 // *.sass.map
 // *.scss.map
+
+# direnv
+.envrc

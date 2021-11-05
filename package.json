@@ -19,5 +19,8 @@
   "repository": "git@github.com:ArkToria/arktoria.github.io.git",
   "author": "cocomeow <catnights@pm.me>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build-js": "tsc -p tsconfig.json"
+  }
 }
