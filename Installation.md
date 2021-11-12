@@ -6,15 +6,14 @@
 > https://github.com/arktoria/across/releases
 
 ### Git Version 
-> <div id="across-git-version">v</div>
 
-- [Arch Linux](https://github.com/ArkToria/ACross/actions/workflows/arch-build.yaml)
+- [Arch Linux](https://github.com/ArkToria/ACross/actions/workflows/arch-build.yaml) | <span id="across-git-archlinux"></span>
 
 - [Nix / NixOS](https://github.com/ArkToria/ACross/actions/workflows/nix-build.yaml)
 
-- [Windows x86_64 - MSVC](https://github.com/ArkToria/ACross/actions/workflows/msvc-build.yaml)
+- [Windows x86_64 - MSVC](https://github.com/ArkToria/ACross/actions/workflows/msvc-build.yaml) | <span id="across-git-msvc"></span>
 
-- [Windows x86_64 - MSYS2](https://github.com/ArkToria/ACross/actions/workflows/msys2-mingw64-build.yaml)
+- [Windows x86_64 - MSYS2](https://github.com/ArkToria/ACross/actions/workflows/msys2-mingw64-build.yaml) | <span id="across-git-mingw-w64"></span>
 
 ## Build From Source
 

@@ -1,5 +1,4 @@
 import { request } from 'https://cdn.skypack.dev/@octokit/request'
-import { semverRegex } from 'https://cdn.skypack.dev/semver-regex'
 
 async function setACrossGitVersion () {
   const content = await request('GET /repos/{owner}/{repo}/actions/artifacts', {
@@ -7,16 +6,18 @@ async function setACrossGitVersion () {
     repo: 'ACross'
   })
 
-  const pkgName = content.data.artifacts[0].name
+  const pkgMap = new Map<string, boolean>()
 
-  if (pkgName.length !== 0) {
-    const verDiv = document.getElementById('across-git-version')
-    const verElement = document.createElement('span')
-    const verStr = pkgName.match(semverRegex())
-
-    if (verStr !== null) {
-      verElement.textContent = verStr[0].toString()
-      verDiv?.appendChild(verElement)
+  for (const pkg of content.data.artifacts) {
+    for (const pkgType of ['msvc', 'mingw-w64', 'archlinux']) {
+      if (pkg.name !== '' && pkg.name.includes(pkgType) && !pkgMap.has(pkgType)) {
+        pkgMap.set(pkgType, true)
+        const verElement = document.getElementById(`across-git-${pkgType}`)
+        if (verElement != null) {
+          verElement.textContent = pkg.name
+        }
+        break
+      }
     }
   }
 }
