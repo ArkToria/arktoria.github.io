@@ -16,13 +16,12 @@ The system tray widget will be loaded asynchronously along with the panel, and t
 
 ```ini
 # ~/.config/systemd/user/across.service
+
 [Unit]
-Documentation=man:systemd-xdg-autostart-generator(8)
+Description=ACross
 SourcePath=/usr/share/applications/org.arktoria.across.desktop
 PartOf=graphical-session.target
-
-Description=ACross
-After=graphical-session.target
+Wants=graphical-session.target
 
 [Service]
 Type=exec
@@ -31,6 +30,9 @@ ExecStart=:/usr/bin/across "-qwindowicon" "org.arktoria.across"
 Restart=no
 TimeoutSec=5s
 Slice=app.slice
+
+[Install]
+WantedBy=default.target
 ```
 
 ## Windows
