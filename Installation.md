@@ -120,7 +120,12 @@ $ pacman -S mingw-w64-x86_64-qt6-base \
     mingw-w64-x86_64-protobuf \
     mingw-w64-x86_64-grpc \
     mingw-w64-x86_64-nlohmann-json \
-    mingw-w64-x86_64-zxing-cpp
+    mingw-w64-x86_64-zxing-cpp \
+    mingw-w64-x86_64-cmake \
+    mingw-w64-x86_64-clang \
+    mingw-w64-x86_64-ninja \
+    mingw-w64-x86_64-gcc \
+    mingw-w64-x86_64-gtest
 ```
 
 ##### 2. Build the CMake Project
