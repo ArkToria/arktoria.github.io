@@ -87,7 +87,7 @@ The subscription content type should be one of the following three: `Base64`, `S
   }
   ```
 
-- VMESS Outbound Object
+- VMESS [Outbound Object](https://www.v2fly.org/config/outbounds.html#outboundobject)
 
     ```json
     {
