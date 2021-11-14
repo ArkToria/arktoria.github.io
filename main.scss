@@ -1,10 +1,19 @@
+p {
+    font-size: 1.2em !important;
+}
+
 .cover-main {
     img {
         max-width: 15vw;
     }
 }
+
 .app-name-link {
     img {
         max-width: 40%;
     }    
+}
+
+.markdown-section {
+    max-width: 60vw !important;
 }
