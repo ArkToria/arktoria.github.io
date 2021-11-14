@@ -1,3 +1,5 @@
 * [Introduction](/README.md)
 * [Installation](/Installation.md)
+* [UI & Usage](/UIAndUsage.md)
+* [Contributing](/Contributing.md)
 * [F&Q](/FAQ.md)
