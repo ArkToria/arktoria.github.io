@@ -14,7 +14,7 @@ Please check if there is a `config.json` file in the working directory, because 
 
 The system tray widget will be loaded asynchronously along with the panel, and the application will be opened before them. The following is an example user service of start after `5s` delay.
 
-```ini
+```systemd
 # ~/.config/systemd/user/across.service
 
 [Unit]
