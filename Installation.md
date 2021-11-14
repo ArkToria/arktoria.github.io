@@ -17,6 +17,30 @@
 
 ## Build From Source
 
+### Dependencies
+- Runtime requirements:
+    - qt6-base
+    - qt6-svg
+    - qt6-quickcontrols2
+    - qt6-translations
+    - qt6-tools
+    - qt6-imageformats
+    - qt6-5compat
+    - [curl](https://github.com/curl/curl)
+    - [fmt](https://github.com/fmtlib/fmt) `>=8.0.0`
+    - [spdlog](https://github.com/gabime/spdlog) `>=1.9.0`
+    - [grpc](https://github.com/grpc/grpc)
+    - [protobuf](https://github.com/protocolbuffers/protobuf)
+    - [nlohmann-json](https://github.com/nlohmann/json)
+    - [zxing-cpp](https://github.com/nu-book/zxing-cpp) `>=1.2.0`
+
+- Build requirements:
+    - gcc / clang / msvc (Support C++ 20 Standard)
+    - ninja (optional)
+    - git
+    - cmake
+    - gtest
+
 ### Linux
 
 Please refer to Arch Linux [PKGBUILD](https://github.com/ArkToria/ACross/blob/master/pkgbuild/arch/across-dev-git/PKGBUILD) file for installation dependencies.
@@ -32,6 +56,21 @@ $ cmake --build .
 $ DESTDIR=<installation_directory> cmake --install .
 ```
 
+> [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) is a CMake script that adds dependency management capabilities to CMake. 
+
+We use `CPM` as dependencies source manager for C++. In our settings, it will first search the local system package as default. If no dependencies are found, they will be automatically pulled by [FetchContent()](https://cmake.org/cmake/help/latest/module/FetchContent.html) based on the version. However, some basic dependencies like `gcc` and `cmake` still require you to manually build and install.
+
+If your build system does not support packaging through the internet, such as [OBS](https://build.opensuse.org/). You need to manually synchorize the submodules and set the following options to `OFF`.
+
+```bash
+$ cmake .. \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DFETCH_MAGIC_ENUM=OFF \
+    -DFETCH_SEMVER=OFF \
+    -DFETCH_SINGLE_APPLICATION=OFF \
+    -GNinja
+```
 ### Windows
 
 #### vcpkg
