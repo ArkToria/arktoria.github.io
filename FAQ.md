@@ -12,6 +12,8 @@ There may be a situation where the local port is occupied. Please change the inb
 
 > The proxy node configuration failed to take effect
 
+![config.json](/FAQ/use_local_config.png)
+
 Please check if there is a `config.json` file in the working directory, because `ACross` send the configuration to stdin, but the default priority on v2ray core is lower than the local file. So you need to delete the `config.json` or create a separate working directory for the application without any configuration files.
 
 ## Linux
