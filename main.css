@@ -6,7 +6,9 @@
   max-width: 40%;
 }
 
-.markdown-section {
-  max-width: 60vw !important;
+@media screen and (min-width: 960px) {
+  .markdown-section {
+    max-width: 60vw !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
