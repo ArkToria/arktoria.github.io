@@ -16,6 +16,10 @@ There may be a situation where the local port is occupied. Please change the inb
 
 Please check if there is a `config.json` file in the working directory, because `ACross` send the configuration to stdin, but the default priority on v2ray core is lower than the local file. So you need to delete the `config.json` or create a separate working directory for the application without any configuration files.
 
+> Update subscription through proxy
+
+If a node is currently running, it will automatically use the node as an proxy to download and update items.
+
 ## Linux
 
 ### Wayland
@@ -48,3 +52,7 @@ WantedBy=default.target
 ```
 
 ## Windows
+
+> The software built by vcpkg and MSVC cannot add or update groups via the `tls1.3` only subscription link.
+
+We use `curl` as the downloader, but it still have no TLS 1.3 support on SChannel. Please following the upstream [issue](https://github.com/curl/curl/pull/7784).
