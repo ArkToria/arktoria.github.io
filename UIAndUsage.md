@@ -102,3 +102,9 @@ The subscription content type should be one of the following three: `Base64`, `S
         }
     }
     ```
+
+#### Update
+
+When the application starts, it will automatically update the subscription groups according to the last update time and update cycle.
+
+For manual update, you can right-click to update a single group or drop-down group list to update all groups.
