@@ -65,4 +65,41 @@ Item {
 }
 ```
 
+### Directory Structure
+
+```text
+.
+├── 3rdpart // git submodules
+├── cmake
+├── CMakeLists.txt
+├── i18n // translations
+├── LICENSE
+├── misc // icons and other static source
+    ├── across_example.json
+    ├── across.proto
+    ├── across.rc
+    ├── command.proto
+    ├── design
+    ├── icons
+    ├── org.arktoria.across.desktop
+    ├── resource.h
+    ├── screenshots
+    ├── v2ray_api.proto
+    ├── v2ray_config.proto
+    └── VERSION
+├── pkgbuild
+    ├── arch
+    └── msys2
+├── README.md
+├── src
+    ├── app.cpp
+    ├── app.h
+    ├── main.cpp
+    ├── models // Processing
+    ├── view_models // Data Bindings
+    └── views // QML Files
+├── tests
+└── vcpkg.json
+```
+
 ## Development Environment
