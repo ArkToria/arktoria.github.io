@@ -58,12 +58,18 @@ Item {
     Rectangle {} // child objects
 
     Connections {} // special child objects
-    
+
     states: State {} // states
 
     transitions: Transition {} // transitions
 }
 ```
+
+#### Naming Conventions
+
+- `Snake Case` for temporary variables: `auto node_info = ...;`
+- `Hungarian notation` for member variables.: `Config m_config; Config* p_config;`
+- `Camel Case` for QML property and method: `void getNodeInfo();`
 
 ### Directory Structure
 
@@ -101,5 +107,35 @@ Item {
 ├── tests
 └── vcpkg.json
 ```
+
+### Core Components
+
+- [Application](https://github.com/ArkToria/ACross/blob/master/src/app.h)
+
+  Program entry. Providing initialization, QML object bindings and SingleApplication.
+
+- [ConfigTools](https://github.com/ArkToria/ACross/blob/master/src/view_models/configtools.h)
+
+  Processing user profile. Generating, parsing and saving configuration according to the [across.proto](https://github.com/ArkToria/ACross/blob/master/misc/across.proto).
+
+- [CoreTools](https://github.com/ArkToria/ACross/blob/master/src/models/coretools.h)
+
+  QProcess control and send configuration to v2fly core by `stdin`.
+
+- [LogTools](https://github.com/ArkToria/ACross/blob/master/src/view_models/logtools.h)
+
+  Core anc application logger. There are two global static logger named `app` and `core`. You can get them from `spdlog::get("app")` or `spdlog::get("core")` and clone to your component named logger. [More...](https://spdlog.docsforge.com/v1.x/5.logger-registry/)
+
+- [DBTools](https://github.com/ArkToria/ACross/blob/master/src/models/dbtools.h)
+
+  SQlite3 database control. Used to store node configurations and some runtime variables. You can directly open the database to get the fields.
+
+- [GroupList](https://github.com/ArkToria/ACross/blob/master/src/view_models/grouplist.h)
+
+  Loading [GroupInfo](https://github.com/ArkToria/ACross/blob/efd1e64aed63ed81d7d1bd7bb42527db5f8d86bb/src/models/dbtools.h#L50) items from database and managing the subscription.
+
+- [NodeList](https://github.com/ArkToria/ACross/blob/master/src/view_models/nodelist.h)
+
+  Loading [NodeInfo](https://github.com/ArkToria/ACross/blob/efd1e64aed63ed81d7d1bd7bb42527db5f8d86bb/src/models/dbtools.h#L30) items by current group and managing them.
 
 ## Development Environment
