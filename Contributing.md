@@ -19,7 +19,7 @@ Due to the tight coupling required by some features, basic knowledge of both C++
 - gRPC: https://grpc.io/
 - V2Fly Core Document: https://www.v2fly.org/
 
-### Code of Conduct
+### Code Style
 
 #### Auto Format
 
