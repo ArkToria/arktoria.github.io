@@ -139,3 +139,15 @@ Item {
   Loading [NodeInfo](https://github.com/ArkToria/ACross/blob/efd1e64aed63ed81d7d1bd7bb42527db5f8d86bb/src/models/dbtools.h#L30) items by current group and managing them.
 
 ## Development Environment
+
+> You should install the [dependencies](/Installation?id=dependencies) at first
+
+### Linux
+
+For Linux developer, you can easily download and install the dependencies and QtCreator from the mirrors. Set the tool kits to qt6 and the compiler we recommend is `gcc` or the latest `clang`. Then set up automatic formatting and enable QML debug as mentioned before.
+
+![qt_version](/Contributing/qt_version.png)
+
+![qml_debug](/Contributing/qml_debug.png)
+
+### Windows
