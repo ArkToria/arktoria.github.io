@@ -6,11 +6,11 @@ If you're interested in contributing to this project, please provide a pull requ
 
 ### Basic Information
 
-This project is mainly composed by one repository, hosted on self-built gitea server for safety and convenience reasons and push to the [mirror repository](https://github.com/ArkToria/ACross) on Github. Therefore, for the pull requests, we will choose to squash merge manually instead of on the [Github Pull Requests Page](https://github.com/ArkToria/ACross/pulls).
+This project is mainly composed of one repository, hosted on a self-built gitea server for safety and convenience reasons and push to the [mirror repository](https://github.com/ArkToria/ACross) on Github. Therefore, for the pull requests, we will choose to squash merge manually instead of on the [Github Pull Requests Page](https://github.com/ArkToria/ACross/pulls).
 
 The backend side of the application is written in C++, while the frontend is written in Qt/QML. The wiki website is built on the [docsify](https://docsify.js.org/#/) generator.
 
-Due to the tight coupling required by some features, basic knowledge of both C++ and Qt/QML is recommend.
+Due to the tight coupling required by some features, basic knowledge of both C++ and Qt/QML is recommended.
 
 - Modern C++ Tutorial: https://changkun.de/modern-cpp/
 - Qt/QML: https://doc.qt.io/qt-6/
@@ -33,7 +33,7 @@ Be careful **not** to check the `Override Clang Format configuration file` box.
 
 ![qml-format](/Contributing/qml_format.png)
 
-Also remember to enable QML formatting.
+Also, remember to enable QML formatting.
 
 #### QML Coding Conventions
 
@@ -112,15 +112,15 @@ Item {
 
 - [Application](https://github.com/ArkToria/ACross/blob/master/src/app.h)
 
-  Program entry. Providing initialization, QML object bindings and SingleApplication.
+  Program entry. Providing initialization, QML object bindings, and SingleApplication.
 
 - [ConfigTools](https://github.com/ArkToria/ACross/blob/master/src/view_models/configtools.h)
 
-  Processing user profile. Generating, parsing and saving configuration according to the [across.proto](https://github.com/ArkToria/ACross/blob/master/misc/across.proto).
+  Processing user profile. Generating, parsing, and saving configuration according to the [across.proto](https://github.com/ArkToria/ACross/blob/master/misc/across.proto).
 
 - [CoreTools](https://github.com/ArkToria/ACross/blob/master/src/models/coretools.h)
 
-  QProcess control and send configuration to v2fly core by `stdin`.
+  QProcess control and send the configuration to v2fly core by `stdin`.
 
 - [LogTools](https://github.com/ArkToria/ACross/blob/master/src/view_models/logtools.h)
 
@@ -132,7 +132,7 @@ Item {
 
 - [GroupList](https://github.com/ArkToria/ACross/blob/master/src/view_models/grouplist.h)
 
-  Loading [GroupInfo](https://github.com/ArkToria/ACross/blob/efd1e64aed63ed81d7d1bd7bb42527db5f8d86bb/src/models/dbtools.h#L50) items from database and managing the subscription.
+  Loading [GroupInfo](https://github.com/ArkToria/ACross/blob/efd1e64aed63ed81d7d1bd7bb42527db5f8d86bb/src/models/dbtools.h#L50) items from the database and managing the subscription.
 
 - [NodeList](https://github.com/ArkToria/ACross/blob/master/src/view_models/nodelist.h)
 

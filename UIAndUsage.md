@@ -1,4 +1,4 @@
-# User Intreface
+# User Interface
 
 ## Home Page
 
@@ -18,13 +18,13 @@ Enter the group name and you can pre-fill the node list in `base64` format here,
 
 ![Create Subscription group](/UI/create_subscription_group.png)
 
-The subscription content type should be one of the following three: `Base64`, `SIP008` and `JSON Outbound`. If you are not sure, enter the subscription link in your browser to compare with the following scheme.
+The subscription content type should be one of the following three: `Base64`, `SIP008`, and `JSON Outbound`. If you are not sure, enter the subscription link in your browser to compare with the following scheme.
 
 #### Subscription Type
 
 - Base64: Generally looks like `vmess://`|`ss://`|`trojan://`
 
-  - VMESS: `vmess://<base64EncodeJson>`
+  - [VMESS](<https://github.com/2dust/v2rayN/wiki/%E5%88%86%E4%BA%AB%E9%93%BE%E6%8E%A5%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E(ver-2)>): `vmess://<base64EncodeJson>`
 
   ```json
 
@@ -89,24 +89,76 @@ The subscription content type should be one of the following three: `Base64`, `S
 
 - VMESS [Outbound Object](https://www.v2fly.org/config/outbounds.html#outboundobject)
 
-    ```json
-    {
-        "sendThrough": "0.0.0.0",
-        "protocol": "protocol name",
-        "settings": {},
-        "tag": "PROXY",
-        "streamSettings": {},
-        "proxySettings": {
-            "tag": "another-outbound-tag",
-            "transportLayer": false
-        }
+  ```json
+  {
+    "sendThrough": "0.0.0.0",
+    "protocol": "protocol name",
+    "settings": {},
+    "tag": "PROXY",
+    "streamSettings": {},
+    "proxySettings": {
+      "tag": "another-outbound-tag",
+      "transportLayer": false
     }
-    ```
+  }
+  ```
 
 #### Update
 
 When the application starts, it will automatically update the subscription groups according to the last update time and update cycle.
 
-For manual update, you can right-click to update a single group or drop-down group list to update all groups.
+For manual updates, you can right-click to update a single group or drop-down group list to update all groups.
 
 ![update groups](/UI/update_groups.png)
+
+## Setting Page
+
+![setting page](/UI/setting_page.png)
+
+All setting are in the configuration file, the default configuration file path is as follows:
+
+- UNIX: `~/.config/ACross/across.json`
+- Windows: `C:\Users\<UserName>\AppData\Local\ACross\across.json`
+
+### Core Settings
+
+#### Install
+
+Before we connect to the node, we need to install and configure the core. We recommend installing the core preferred package manager. For other methods, you can refer to the official tutorials and make sure that there is no `config.json` file under your installation directory. [More...](/FAQ?id=application)
+
+> https://www.v2fly.org/guide/install.html
+
+#### Select
+
+![core settings](/UI/core_dialog.png)
+
+- Core Path: v2ray / v2ray.exe executable file
+- Assets Path: File directory containing `geoip.dat` and geosite.dat
+
+If the core is successfully found, the core information will be displayed below. And before you test the API, you should start the proxy node by double click the item card on the `HomePage`.
+
+### Inbound Settings
+
+![inbound settings](/UI/inbound_setting.png)
+
+We currently do not provide any form of a global or transparent proxy, which means you need the set the environment variables or software built-in proxy client, such as `Telegram Desktop` and your browser, to the correct listening port. And these ports should not be occupied. [More...](/FAQ?id=core)
+
+### Application Settings
+
+![application settings](/UI/application_setting.png)
+
+- The `Data directory` contains the database for storing node information and log files _(if you set the `Log Outputs` to file or both stdout and file)_.
+
+- The `User Agent` is set to disguise the download behavior of the browser for [curl](https://curl.se/) downloader. If you don't know what it means, please leave it blank by default.
+
+- `Auto Connect` will automatically start the proxy when the app starts, if you don't have any available nodes, please don't open this option yet.
+
+- `Tray Icon` requires the system tray, for `GNOME` users, we recommend installing a [appindicator extensions](https://github.com/ubuntu/gnome-shell-extension-appindicator) and opening on tweaks.
+
+- `Minimize Startup` allows you to start the application in the background, usually enable with `Auto Connect` to achieve quiet proxy. And if you don't have the tray icon, click the application icon again to show the main window.
+
+### Appearance Settings
+
+![appearance settings](/UI/appearance_setting.png)
+
+Some options for setting the appearance, you can add a background image for yourself, or manually set the color schemes in the configuration file.

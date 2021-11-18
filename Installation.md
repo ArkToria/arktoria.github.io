@@ -58,9 +58,9 @@ $ DESTDIR=<installation_directory> cmake --install .
 
 > [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) is a CMake script that adds dependency management capabilities to CMake. 
 
-We use `CPM` as dependencies source manager for C++. In our settings, it will first search the local system package as default. If no dependencies are found, they will be automatically pulled by [FetchContent()](https://cmake.org/cmake/help/latest/module/FetchContent.html) based on the version. However, some basic dependencies like `gcc` and `cmake` still require you to manually build and install.
+We use `CPM` as a dependencies source manager for C++. In our settings, it will first search the local system package as default. If no dependencies are found, they will be automatically pulled by [FetchContent()](https://cmake.org/cmake/help/latest/module/FetchContent.html) based on the version. However, some basic dependencies like `gcc` and `cmake` still require you to manually build and install.
 
-If your build system does not support packaging through the internet, such as [OBS](https://build.opensuse.org/). You need to manually synchorize the submodules and set the following options to `OFF`.
+If your build system does not support packaging through the internet, such as [OBS](https://build.opensuse.org/). You need to manually synchronize the submodules and set the following options to `OFF`.
 
 ```bash
 $ cmake .. \
@@ -75,7 +75,7 @@ $ cmake .. \
 
 #### vcpkg
 
-The minimum required version of Qt for building ACross project is `v6.2.0`. However, if you use the official Qt installer, you need at least version `v6.2.1` because of the missing `qt6-5compat` component.
+The minimum required version of Qt for building the `ACross` project is `v6.2.0`. However, if you use the official Qt installer, you need at least version `v6.2.1` because of the missing `qt6-5compat` component.
 
 The following commands are all executed in PowerShell.
 
@@ -125,7 +125,7 @@ $ cmake --build .
 #### MSYS2 + MINGW
 **Recommended:**
 
-Build the MSYS2 package from [ACross PKGBUILD](https://github.com/ArkToria/ACross/blob/master/pkgbuild/msys2/PKGBUILD) following to the official tutorial.
+Build the MSYS2 package from [ACross PKGBUILD](https://github.com/ArkToria/ACross/blob/master/pkgbuild/msys2/PKGBUILD) following the official tutorial.
 
 > https://www.msys2.org/wiki/Creating-Packages/
 
