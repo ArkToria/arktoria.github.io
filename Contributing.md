@@ -65,6 +65,8 @@ Item {
 }
 ```
 
+For complex `JavaScript` functions, we use `TypeScript` to generate and import them into QML files. [More...](https://github.com/ArkToria/ACross/blob/d396ba7e1dc33067988e9d63c4345dd126fe797c/tsconfig.json#L101)
+
 #### Naming Conventions
 
 - `Snake Case` for temporary variables: `auto node_info = ...;`
@@ -103,7 +105,7 @@ Item {
     ├── main.cpp
     ├── models // Processing
     ├── view_models // Data Bindings
-    └── views // QML Files
+    └── views // QML Files and Scripts
 ├── tests
 └── vcpkg.json
 ```
