@@ -44,7 +44,7 @@ Type=exec
 ExecStartPre=:/usr/bin/sleep 5s
 ExecStart=:/usr/bin/across "-qwindowicon" "org.arktoria.across"
 Restart=no
-TimeoutSec=5s
+TimeoutSec=10s
 Slice=app.slice
 
 [Install]
