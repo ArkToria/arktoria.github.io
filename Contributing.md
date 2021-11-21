@@ -176,7 +176,3 @@ For Linux developer, you can easily download and install the dependencies and Qt
 ![qml_debug](/Contributing/qml_debug.png)
 
 ### Windows
-
-```
-
-```

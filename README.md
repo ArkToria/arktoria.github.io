@@ -1,16 +1,16 @@
 # Welcome
 
-Welcome to the official documentation of `ACross`. 
+Welcome to the official documentation of `ACross`.
 
-Here you can find almost anything you need about the configurations, such as your instance, usage, and contributing guidelines.
+Here you can find almost anything you need about the project, such as your instance configuration, application usage, and contributing guidelines.
 
 ![preview](_media/banner.png)
 
-## What is Across?
+## What is ACross?
 
-`ACross` is a simple and modern GUI client for `v2ray`, written in `Qt6` & `QML`. It is one of the main projects of the `Arktoria` community. 
+`ACross` is a simple and modern GUI client for `v2ray`, written in `Qt6` & `QML`. It is one of the main projects of the `Arktoria` community.
 
-<!--We focus on users' experience. -->Being simple and practical is our principle. Thus, we do not provide many redundant functions but design a few flexible ones to optimize users' experience. To keep the project pure and clean, there's no build-in core, but you can easily set the core and even customize the interface. 
+Focus on user experience, simplicity and practicality are our principles. Thus, we do not provide many redundant functions but design a few flexible ones to optimize users' experience. To keep the project pure and clean, there's no build-in core, but you can easily set the core and even customize the interface.
 
 ### Supported Platforms
 
@@ -28,13 +28,13 @@ Here you can find almost anything you need about the configurations, such as you
 - SIP008
 - Base64 (`ss://` | `vmess://` | `trojan://`)
 
-We also provide manual local configuration management and automatic update. 
+We also provide manual local configuration management and automatic update.
 
-The information of the nodes are stored in an `SQLite` database, which allows queries and backup outside this app.
+The information of the nodes are stored in an `SQLite3` database, which allows queries and backup outside this app.
 
 ## Our Community
 
-One crucial part of `ACross` is our community, where everyone can always ask for new features and report issues. 
+One crucial part of `ACross` is our community, where everyone can always ask for new features and report issues.
 
 Why not get involved via our [GitHub Issues](https://github.com/ArkToria/ACross/issues) and help our community grow stronger?
 
