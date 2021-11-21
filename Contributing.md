@@ -35,6 +35,10 @@ Be careful **not** to check the `Override Clang Format configuration file` box.
 
 Also, remember to enable QML formatting.
 
+For [Visual Studio Code](https://code.visualstudio.com/) user, install the [C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools), and enable the `Editor: Format On Save` option. If the `.clang-format` file is not found, you can use the `{Key: value, ...}` to set specific parameters.
+
+![clang-format-vscode](/Contributing/clang_format_vscode.png)
+
 #### QML Coding Conventions
 
 > https://doc.qt.io/qt-6/qml-codingconventions.html
