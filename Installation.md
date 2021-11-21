@@ -3,7 +3,7 @@
 ## Pre-built Package
 
 ### Releases
-> https://github.com/arktoria/across/releases
+- https://github.com/arktoria/across/releases
 
 ### Git Version 
 
@@ -43,7 +43,7 @@
 
 ### Linux
 
-Please refer to Arch Linux [PKGBUILD](https://github.com/ArkToria/ACross/blob/master/pkgbuild/arch/across-dev-git/PKGBUILD) file for installation dependencies.
+Please refer to Arch Linux [PKGBUILD file](https://github.com/ArkToria/ACross/blob/master/pkgbuild/arch/across-dev-git/PKGBUILD) for installation dependencies.
 
 ```bash
 $ cd <ACross Reposotiry>
@@ -58,9 +58,9 @@ $ DESTDIR=<installation_directory> cmake --install .
 
 > [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) is a CMake script that adds dependency management capabilities to CMake. 
 
-We use `CPM` as a dependencies source manager for C++. In our settings, it will first search the local system package as default. If no dependencies are found, they will be automatically pulled by [FetchContent()](https://cmake.org/cmake/help/latest/module/FetchContent.html) based on the version. However, some basic dependencies like `gcc` and `cmake` still require you to manually build and install.
+We use `CPM` as the dependency source manager for C++. In our settings, it will first search the local system package as default. If no dependencies are found, they will be automatically pulled by [FetchContent()](https://cmake.org/cmake/help/latest/module/FetchContent.html) based on the version. However, some basic dependencies like `gcc` and `cmake` still require you to manually build and install.
 
-If your build system does not support packaging through the internet, such as [OBS](https://build.opensuse.org/). You need to manually synchronize the submodules and set the following options to `OFF`.
+If your build system does not support packaging through the internet, such as [OBS](https://build.opensuse.org/), you'll need to manually synchronize the submodules and set the following options to `OFF`.
 
 ```bash
 $ cmake .. \
@@ -75,7 +75,7 @@ $ cmake .. \
 
 #### vcpkg
 
-The minimum required version of Qt for building the `ACross` project is `v6.2.0`. However, if you use the official Qt installer, you need at least version `v6.2.1` because of the missing `qt6-5compat` component.
+The minimum required version of Qt for building the `ACross` project is `v6.2.0`. However, if you use the official Qt installer, then you need at least version `v6.2.1` because of the absent `qt6-5compat` component.
 
 The following commands are all executed in PowerShell.
 
@@ -83,7 +83,7 @@ The following commands are all executed in PowerShell.
 
 ###### If you have not installed `vcpkg` before
 
-Clone and bootstrap it by
+Clone and bootstrap it.
 
 ```powershell
 $ git clone --recursive https://github.com/microsoft/vcpkg.git
@@ -139,9 +139,7 @@ You can also follow the steps below to build manually:
 
 ##### 0. Install MSYS2
 
-Download the installer from [Official Website](https://www.msys2.org/)
- |
- [Tuna Mirror](https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/msys2-x86_64-latest.exe)
+Download the installer from [Official Website](https://www.msys2.org/) | [TUNA Mirror](https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/msys2-x86_64-latest.exe)
 
 ##### 1. Install Dependencies
 
