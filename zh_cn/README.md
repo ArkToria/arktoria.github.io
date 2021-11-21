@@ -38,4 +38,4 @@
 
 可以参与我们的 [GitHub Issues](https://github.com/ArkToria/ACross/issues) 并帮助我们的社区变得更加强大。
 
-对于开发人员，请参阅 [贡献页面](/#/Contributing)。
+对于开发人员，请参阅 [贡献页面](/Contributing)。

@@ -38,4 +38,4 @@ One crucial part of `ACross` is our community, where everyone can always ask for
 
 Why not get involved via our [GitHub Issues](https://github.com/ArkToria/ACross/issues) and help our community grow stronger?
 
-For developers, it's a good idea to check [the contributing page](/#/Contributing).
+For developers, it's a good idea to check [the contributing page](/Contributing).
