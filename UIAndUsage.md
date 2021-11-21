@@ -22,12 +22,12 @@ The subscription content type should be one of the following three: `Base64`, `S
 
 #### Subscription Type
 
-- Base64: Generally looks like `vmess://`|`ss://`|`trojan://`
+- Base64: Typically, it looks like `vmess://` | `ss://` | `trojan://`
 
   - [VMESS](<https://github.com/2dust/v2rayN/wiki/%E5%88%86%E4%BA%AB%E9%93%BE%E6%8E%A5%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E(ver-2)>): `vmess://<base64EncodeJson>`
 
   ```json
-
+{
      "v": "2",
      "ps": "Names",
      "add": "111.111.111.111",
@@ -105,7 +105,7 @@ The subscription content type should be one of the following three: `Base64`, `S
 
 #### Update
 
-When the application starts, it will automatically update the subscription groups according to the last update time and update cycle.
+When the application launches, it will automatically update the subscription groups according to the last updated time and update intervals.
 
 For manual updates, you can right-click to update a single group or drop-down group list to update all groups.
 
@@ -124,7 +124,9 @@ All setting are in the configuration file, the default configuration file path i
 
 #### Install
 
-Before we connect to the node, we need to install and configure the core. We recommend installing the core preferred package manager. For other methods, you can refer to the official tutorials and make sure that there is no `config.json` file under your installation directory. [More...](/FAQ?id=application)
+Before we connect to the nodes, we need to install and configure the core. 
+
+It's recommended to install the core via preferred package manager. As for other methods, you can refer to the official tutorial and make sure that there is no `config.json` file in your installation directory. [More...](/FAQ?id=application)
 
 > https://www.v2fly.org/guide/install.html
 
@@ -132,16 +134,18 @@ Before we connect to the node, we need to install and configure the core. We rec
 
 ![core settings](/UI/core_dialog.png)
 
-- Core Path: v2ray / v2ray.exe executable file
-- Assets Path: File directory containing `geoip.dat` and geosite.dat
+- Core Path: the apth of your executable file - `v2ray` / `v2ray.exe` 
+- Assets Path: File directory containing `geoip.dat` and `geosite.dat`
 
-If the core is successfully found, the core information will be displayed below. And before you test the API, you should start the proxy node by double click the item card on the `HomePage`.
+If the core is found as expected, the core information will be displayed in "Core info". 
+
+Also, before you test the API, you should start the proxy node by double clicking the item card on the `HomePage`.
 
 ### Inbound Settings
 
 ![inbound settings](/UI/inbound_setting.png)
 
-We currently do not provide any form of a global or transparent proxy, which means you need the set the environment variables or software built-in proxy client, such as `Telegram Desktop` and your browser, to the correct listening port. And these ports should not be occupied. [More...](/FAQ?id=core)
+Currently, we do not provide any form of a global or transparent proxy, which means you need the set the environment variables or software built-in proxy client, such as `Telegram Desktop` and your browser, to the correct listening port. These ports should not be occupied by other applications. [More...](/FAQ?id=core)
 
 ### Application Settings
 
@@ -153,9 +157,9 @@ We currently do not provide any form of a global or transparent proxy, which mea
 
 - `Auto Connect` will automatically start the proxy when the app starts, if you don't have any available nodes, please don't open this option yet.
 
-- `Tray Icon` requires the system tray, for `GNOME` users, we recommend installing a [appindicator extensions](https://github.com/ubuntu/gnome-shell-extension-appindicator) and opening on tweaks.
+- `Tray Icon` requires the system tray. or `GNOME` users, we recommend installing an [appindicator extensions](https://github.com/ubuntu/gnome-shell-extension-appindicator) and switch on tweaks.
 
-- `Minimize Startup` allows you to start the application in the background, usually enable with `Auto Connect` to achieve quiet proxy. And if you don't have the tray icon, click the application icon again to show the main window.
+- `Minimize Startup` allows you to start the application in background, usually enabled along with `Auto Connect` to make for quiet proxy. If you don't have the tray icon, click the application icon again to show the main window.
 
 ### Appearance Settings
 

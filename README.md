@@ -1,25 +1,41 @@
-## Welcome
+# Welcome
 
-Welcome to ACross's official documentation. Here you can find probability anything you need to know about the configurations of your instance, the usage, and the contributing guidelines.
+Welcome to the official documentation of `ACross`. 
+
+Here you can find almost anything you need about the configurations, such as your instance, usage, and contributing guidelines.
 
 ![preview](_media/banner.png)
 
-`ACross` is a simple and modern GUI client for v2ray written in Qt6 & QML which is one of the main products of the `Arktoria` community. We focus on user experience, simple and practical, not many redundant functions but doing it well and flexibility. For instance, we do not provide a build-in core to keep the project pure and clean, but you can easily set the core and even customize the interface for your core branch. One of the crucial pieces of ACross is our community which is always asking us for new features or reporting issues that might happen. We recommend you vividly check our [Github Issues](https://github.com/ArkToria/ACross/issues). For developers, we welcome you to refer to the contributing page.
+## What is Across?
 
-## Supported Platforms
+`ACross` is a simple and modern GUI client for `v2ray`, written in `Qt6` & `QML`. It is one of the main projects of the `Arktoria` community. 
+
+<!--We focus on users' experience. -->Being simple and practical is our principle. Thus, we do not provide many redundant functions but design a few flexible ones to optimize users' experience. To keep the project pure and clean, there's no build-in core, but you can easily set the core and even customize the interface. 
+
+### Supported Platforms
 
 - Linux
 - Windows (at least Windows 10 or newer)
 
-## Protocols
+### Supported Protocols
 
 - VMESS
 - Trojan
 - Shadowsocks
 
-## Subscriptions
+### Subscription Formats
 
 - SIP008
 - Base64 (`ss://` | `vmess://` | `trojan://`)
 
-We also provide manual local configuration management and regular automatic update. All nodes' information will be stored in the `SQLite` database which you can easily back up and read the data without this app.
+We also provide manual local configuration management and automatic update. 
+
+The information of the nodes are stored in an `SQLite` database, which allows queries and backup outside this app.
+
+## Our Community
+
+One crucial part of `ACross` is our community, where everyone can always ask for new features and report issues. 
+
+Why not get involved via our [GitHub Issues](https://github.com/ArkToria/ACross/issues) and help our community grow stronger?
+
+For developers, it's a good idea to check [the contributing page](/#/Contributing).
