@@ -10,7 +10,7 @@ Here you can find almost anything you need about the project, such as your insta
 
 `ACross` is a simple and modern GUI client for `v2ray`, written in `Qt6` & `QML`. It is one of the main projects of the `Arktoria` community.
 
-Focus on user experience, simplicity and practicality are our principles. Thus, we do not provide many redundant functions but design a few flexible ones to optimize users' experience. To keep the project pure and clean, there's no build-in core, but you can easily set the core and even customize the interface.
+Focusing on users' experience, we stick to the principle of simplicity and practicality. Thus, we do not provide many redundant functions but design a few flexible ones. To keep the project pure and clean, there's no build-in core, but you can easily set the core and even customize the interface.
 
 ### Supported Platforms
 
