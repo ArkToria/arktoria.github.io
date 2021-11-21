@@ -144,6 +144,23 @@ For complex `JavaScript` functions, we use `TypeScript` to generate and import t
 
   Loading [NodeInfo](https://github.com/ArkToria/ACross/blob/efd1e64aed63ed81d7d1bd7bb42527db5f8d86bb/src/models/dbtools.h#L30) items by current group and managing them.
 
+### Translations
+
+> https://doc.qt.io/qt-6/internationalization.html
+
+The translation files are located in the [${CMAKE_SOURCE_DIR}/i18n/] (https://github.com/ArkToria/ACross/tree/master/i18n) directory.
+And the file name should conform to the specification: `across_<language code>.ts`, e.g., `across_zh_CN.ts`.
+
+If the translation file is not updated during the build, you can use the following command on project workspace to update it manually.
+
+```bash
+$ lupdate6 src/ -ts i18n/across_zh_CN.ts
+```
+
+We recommend using the `Qt Linguist` tool to edit the generated `xml` translation files.
+
+![qt_linguist_tools](/Contributing/qt_linguist_tools.png)
+
 ## Development Environment
 
 > You should install the [dependencies](/Installation?id=dependencies) at first
@@ -157,3 +174,7 @@ For Linux developer, you can easily download and install the dependencies and Qt
 ![qml_debug](/Contributing/qml_debug.png)
 
 ### Windows
+
+```
+
+```
