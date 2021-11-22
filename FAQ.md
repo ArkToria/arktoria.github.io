@@ -20,6 +20,10 @@ Please check if there is a `config.json` file in the working directory, because 
 
 If a node is currently running, it will automatically use the node as a proxy to download and update items.
 
+> Where is the log page
+
+Due to the high memory usage of the `TextArea` component implementation in QML, we temporarily hide this page and will make it visible after the [upstream repair](https://codereview.qt-project.org/c/qt/qtdeclarative/+/379095/6). When debugging, you can change the output mode to `stdout` or `both` on the setting page.
+
 ## Linux
 
 ### Wayland
