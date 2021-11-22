@@ -1,1 +1,2 @@
-* [介绍](/zh_cn/README.md)
+- [介绍](/zh_cn/README.md)
+- [界面和使用](/zh_cn/UIAndUsage.md)

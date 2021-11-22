@@ -12,6 +12,12 @@
 
 Enter the group name and you can pre-fill the node list in `base64` format here, or leave it blank.
 
+- Edit Local Group
+
+Right Click on the group item card and toggle the `Edit` action.
+
+![Edit group](/UI/edit_group.png)
+
 ### Subscription Group
 
 - Create Subscription Group
@@ -27,20 +33,20 @@ The subscription content type should be one of the following three: `Base64`, `S
   - [VMESS](<https://github.com/2dust/v2rayN/wiki/%E5%88%86%E4%BA%AB%E9%93%BE%E6%8E%A5%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E(ver-2)>): `vmess://<base64EncodeJson>`
 
   ```json
-{
-     "v": "2",
-     "ps": "Names",
-     "add": "111.111.111.111",
-     "port": "32000",
-     "id": "1386f85e-657b-4d6e-9d56-78badb75e1fd",
-     "aid": "100",
-     "scy": "zero",
-     "net": "tcp",
-     "type": "none",
-     "host": "www.bbb.com",
-     "path": "/",
-     "tls": "tls",
-     "sni": "www.ccc.com"
+  {
+    "v": "2",
+    "ps": "Names",
+    "add": "111.111.111.111",
+    "port": "32000",
+    "id": "1386f85e-657b-4d6e-9d56-78badb75e1fd",
+    "aid": "100",
+    "scy": "zero",
+    "net": "tcp",
+    "type": "none",
+    "host": "www.bbb.com",
+    "path": "/",
+    "tls": "tls",
+    "sni": "www.ccc.com"
   }
   ```
 
@@ -124,7 +130,7 @@ All setting are in the configuration file, the default configuration file path i
 
 #### Install
 
-Before we connect to the nodes, we need to install and configure the core. 
+Before we connect to the nodes, we need to install and configure the core.
 
 It's recommended to install the core via preferred package manager. As for other methods, you can refer to the official tutorial and make sure that there is no `config.json` file in your installation directory. [More...](/FAQ?id=application)
 
@@ -134,12 +140,12 @@ It's recommended to install the core via preferred package manager. As for other
 
 ![core settings](/UI/core_dialog.png)
 
-- Core Path: the apth of your executable file - `v2ray` / `v2ray.exe` 
+- Core Path: the path of your executable file - `v2ray` / `v2ray.exe`
 - Assets Path: File directory containing `geoip.dat` and `geosite.dat`
 
-If the core is found as expected, the core information will be displayed in "Core info". 
+If the core is found as expected, the core information will be displayed in "Core info".
 
-Also, before you test the API, you should start the proxy node by double clicking the item card on the `HomePage`.
+Also, before you test the API, you should start the proxy node by double-clicking the item card on the `HomePage`.
 
 ### Inbound Settings
 
@@ -157,9 +163,9 @@ Currently, we do not provide any form of a global or transparent proxy, which me
 
 - `Auto Connect` will automatically start the proxy when the app starts, if you don't have any available nodes, please don't open this option yet.
 
-- `Tray Icon` requires the system tray. or `GNOME` users, we recommend installing an [appindicator extensions](https://github.com/ubuntu/gnome-shell-extension-appindicator) and switch on tweaks.
+- `Tray Icon` requires the system tray. or `GNOME` users, we recommend installing an [appindicator extensions](https://github.com/ubuntu/gnome-shell-extension-appindicator) and switch on `gnome tweaks`.
 
-- `Minimize Startup` allows you to start the application in background, usually enabled along with `Auto Connect` to make for quiet proxy. If you don't have the tray icon, click the application icon again to show the main window.
+- `Minimize Startup` allows you to start the application in background, usually enabled along with `Auto Connect` to make for quiet proxy. If you don't have the system tray, click the application icon again to show the main window.
 
 ### Appearance Settings
 
