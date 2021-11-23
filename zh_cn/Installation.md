@@ -35,11 +35,11 @@
     - [zxing-cpp](https://github.com/nu-book/zxing-cpp) `>=1.2.0`
 
 - 编译环境需求
-    - gcc / clang / msvc (Support C++ 20 Standard)
-    - ninja (optional)
-    - git
-    - cmake
-    - gtest
+    - GCC / Clang / MSVC (Support C++ 20 Standard)
+    - Ninja (optional)
+    - Git
+    - CMake
+    - GoogleTest
 
 ### Linux
 
