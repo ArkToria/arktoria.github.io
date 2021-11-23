@@ -1,3 +1,5 @@
 - [介绍](/zh_cn/README.md)
 - [安装](/zh_cn/Installation.md)
 - [界面和使用](/zh_cn/UIAndUsage.md)
+- [贡献代码](/zh_cn/Contributing.md)
+- [F&Q](/zh_cn/FAQ.md)
