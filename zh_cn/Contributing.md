@@ -1,6 +1,6 @@
 # 贡献代码
 
-若您有意为本项目贡献代码，请您在我们的 [GitHub 仓库](https://github.com/ArkToria/ACross/) 发起一个 Pull Request. 或者，将您的联系方式，比如您的 Telegram 账户，用 [我们的 GPG Key](https://github.com/cocomeow.gpg) 加密后，发送到 [这个邮箱](mailto:catnights@pm.me)。 
+若您有意为本项目贡献代码，请您在我们的 [GitHub 仓库](https://github.com/ArkToria/ACross/) 发起一个 Pull Request. 或者，将您的联系方式，比如您的 Telegram 账户，用 [我们的 GPG Key: 0x6CA67F8C2B1977002086CA96E3CC8F9C451BD83E](https://keys.openpgp.org/vks/v1/by-fingerprint/6CA67F8C2B1977002086CA96E3CC8F9C451BD83E) 加密后，发送到 [这个邮箱](mailto:dev@arktoria.org)。 
 
 同时请注意，本项目是开源的，遵守 [GPL-3.0](https://github.com/ArkToria/ACross/blob/master/LICENSE) 协议。
 

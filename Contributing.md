@@ -1,6 +1,6 @@
 # Contributing
 
-If you're interested in contributing to this project, please open a pull request on our GitHub repository, or send your contact information, such as your telegram account, encrypted with [our GPG Key](https://github.com/cocomeow.gpg), to the [mailbox](mailto:catnights@pm.me). 
+If you're interested in contributing to this project, please open a pull request on our GitHub repository, or send your contact information, such as your telegram account, encrypted with [our GPG Key: 0x6CA67F8C2B1977002086CA96E3CC8F9C451BD83E](https://keys.openpgp.org/vks/v1/by-fingerprint/6CA67F8C2B1977002086CA96E3CC8F9C451BD83E), to the [mailbox](mailto:dev@arktoria.org).
 
 Also, note that this project is open-source and licensed under [GPL-3.0](https://github.com/ArkToria/ACross/blob/master/LICENSE).
 
