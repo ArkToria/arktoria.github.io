@@ -126,6 +126,8 @@
 - UNIX: `~/.config/ACross/across.json`
 - Windows: `C:\Users\<UserName>\AppData\Local\ACross\across.json`
 
+你也可以通过 `ACROSS_CONFIG_PATH` 环境变量来设置它。
+
 ### 核心配置
 
 #### 安装

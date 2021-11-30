@@ -126,6 +126,8 @@ All setting are in the configuration file, the default configuration file path i
 - UNIX: `~/.config/ACross/across.json`
 - Windows: `C:\Users\<UserName>\AppData\Local\ACross\across.json`
 
+You can also set it by the `ACROSS_CONFIG_PATH` environment variable.
+
 ### Core Settings
 
 #### Install
