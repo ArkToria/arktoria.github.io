@@ -165,6 +165,8 @@ Currently, we do not provide any form of a global or transparent proxy, which me
 
 - `Auto Connect` will automatically start the proxy when the app starts, if you don't have any available nodes, please don't open this option yet.
 
+- `Auto Export` will automatically export the current node configuration to data directory when you double-click the node item card.
+
 - `Tray Icon` requires the system tray. or `GNOME` users, we recommend installing an [appindicator extensions](https://github.com/ubuntu/gnome-shell-extension-appindicator) and switch on `gnome tweaks`.
 
 - `Minimize Startup` allows you to start the application in background, usually enabled along with `Auto Connect` to make for quiet proxy. If you don't have the system tray, click the application icon again to show the main window.
