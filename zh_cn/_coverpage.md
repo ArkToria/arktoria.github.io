@@ -8,4 +8,4 @@
 - Shadowsocks / VMESS / Trojan
 
 [GitHub](https://github.com/ArkToria/ACross)
-[Get Started](/zh_cn/README)
+[开始](/zh_cn/README)

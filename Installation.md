@@ -3,9 +3,10 @@
 ## Pre-built Package
 
 ### Releases
+
 - https://github.com/arktoria/across/releases
 
-### Git Version 
+### Git Version
 
 - [Arch Linux](https://github.com/ArkToria/ACross/actions/workflows/arch-build.yaml) | <span id="across-git-archlinux"></span>
 
@@ -15,31 +16,55 @@
 
 - [Windows x86_64 - MSYS2](https://github.com/ArkToria/ACross/actions/workflows/msys2-mingw64-build.yaml) | <span id="across-git-mingw-w64"></span>
 
+### Verify The Package
+
+#### Download and install
+
+- Windows: [Gpg4win](https://gpg4win.org/download.html)
+- Linux: Install `gnupg` from system package manager
+- More: https://gnupg.org/download/
+
+#### Verify from CLI:
+
+```bash
+$ gpg --keyserver keys.openpgp.org --recv-keys 9B1380D7B700BA9DFAAED4849EEEED2D1566C61B
+
+$ gpg --verify <across_release_package>.sig
+```
+
+#### Verify from GUI:
+
+![search from gui](/Installation/search_from_gui.png)
+
+![verify from gui](/Installation/verify_from_gui.png)
+
 ## Build From Source
 
 ### Dependencies
+
 - Runtime requirements:
-    - qt6-base
-    - qt6-svg
-    - qt6-quickcontrols2
-    - qt6-translations
-    - qt6-tools
-    - qt6-imageformats
-    - qt6-5compat
-    - [curl](https://github.com/curl/curl)
-    - [fmt](https://github.com/fmtlib/fmt) `>=8.0.0`
-    - [spdlog](https://github.com/gabime/spdlog) `>=1.9.0`
-    - [grpc](https://github.com/grpc/grpc)
-    - [protobuf](https://github.com/protocolbuffers/protobuf)
-    - [nlohmann-json](https://github.com/nlohmann/json)
-    - [zxing-cpp](https://github.com/nu-book/zxing-cpp) `>=1.2.0`
+
+  - qt6-base
+  - qt6-svg
+  - qt6-quickcontrols2
+  - qt6-translations
+  - qt6-tools
+  - qt6-imageformats
+  - qt6-5compat
+  - [curl](https://github.com/curl/curl)
+  - [fmt](https://github.com/fmtlib/fmt) `>=8.0.0`
+  - [spdlog](https://github.com/gabime/spdlog) `>=1.9.0`
+  - [grpc](https://github.com/grpc/grpc)
+  - [protobuf](https://github.com/protocolbuffers/protobuf)
+  - [nlohmann-json](https://github.com/nlohmann/json)
+  - [zxing-cpp](https://github.com/nu-book/zxing-cpp) `>=1.2.0`
 
 - Build requirements:
-    - GCC / Clang / MSVC (Support C++ 20 Standard)
-    - Ninja (optional)
-    - Git
-    - CMake
-    - GoogleTest
+  - GCC / Clang / MSVC (Support C++ 20 Standard)
+  - Ninja (optional)
+  - Git
+  - CMake
+  - GoogleTest
 
 ### Linux
 
@@ -56,7 +81,7 @@ $ cmake --build .
 $ DESTDIR=<installation_directory> cmake --install .
 ```
 
-> [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) is a CMake script that adds dependency management capabilities to CMake. 
+> [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) is a CMake script that adds dependency management capabilities to CMake.
 
 We use `CPM` as the dependency source manager for C++. In our settings, it will first search the local system package as default. If no dependencies are found, they will be automatically pulled by [FetchContent()](https://cmake.org/cmake/help/latest/module/FetchContent.html) based on the version. However, some basic dependencies like `gcc` and `cmake` still require you to manually build and install.
 
@@ -71,6 +96,7 @@ $ cmake .. \
     -DFETCH_SINGLE_APPLICATION=OFF \
     -GNinja
 ```
+
 ### Windows
 
 #### vcpkg
@@ -123,6 +149,7 @@ $ cmake --build .
 ```
 
 #### MSYS2 + MINGW
+
 **Recommended:**
 
 Build the MSYS2 package from [ACross PKGBUILD](https://github.com/ArkToria/ACross/blob/master/pkgbuild/msys2/PKGBUILD) following the official tutorial.
@@ -175,4 +202,4 @@ $ cmake ../ -GNinja -DCMAKE_BUILD_TYPE=Release
 $ cmake --build .
 ```
 
-The `ENABLE_DEPLOYMENT` option is `ON` by default, this will copy the required resources (including the `*.dll`) to the compiled directory. 
+The `ENABLE_DEPLOYMENT` option is `ON` by default, this will copy the required resources (including the `*.dll`) to the compiled directory.

@@ -3,9 +3,10 @@
 ## 预编译软件包
 
 ### Releases
+
 - https://github.com/arktoria/across/releases
 
-### Git 版本 
+### Git 版本
 
 - [Arch Linux](https://github.com/ArkToria/ACross/actions/workflows/arch-build.yaml) | <span id="across-git-archlinux"></span>
 
@@ -15,31 +16,55 @@
 
 - [Windows x86_64 - MSYS2](https://github.com/ArkToria/ACross/actions/workflows/msys2-mingw64-build.yaml) | <span id="across-git-mingw-w64"></span>
 
+### 验证软件包
+
+#### 下载和安装
+
+- Windows: [Gpg4win](https://gpg4win.org/download.html)
+- Linux: 从系统包管理器安装 `gnupg`
+- 更多: https://gnupg.org/download/
+
+#### 从命令行验证：
+
+```bash
+$ gpg --keyserver keys.openpgp.org --recv-keys 9B1380D7B700BA9DFAAED4849EEEED2D1566C61B
+
+$ gpg --verify <across_release_package>.sig
+```
+
+#### 从图形界面验证：
+
+![search from gui](/Installation/search_from_gui.png)
+
+![verify from gui](/Installation/verify_from_gui.png)
+
 ## 从源代码编译
 
 ### 依赖
+
 - 运行环境需求
-    - qt6-base
-    - qt6-svg
-    - qt6-quickcontrols2
-    - qt6-translations
-    - qt6-tools
-    - qt6-imageformats
-    - qt6-5compat
-    - [curl](https://github.com/curl/curl)
-    - [fmt](https://github.com/fmtlib/fmt) `>=8.0.0`
-    - [spdlog](https://github.com/gabime/spdlog) `>=1.9.0`
-    - [grpc](https://github.com/grpc/grpc)
-    - [protobuf](https://github.com/protocolbuffers/protobuf)
-    - [nlohmann-json](https://github.com/nlohmann/json)
-    - [zxing-cpp](https://github.com/nu-book/zxing-cpp) `>=1.2.0`
+
+  - qt6-base
+  - qt6-svg
+  - qt6-quickcontrols2
+  - qt6-translations
+  - qt6-tools
+  - qt6-imageformats
+  - qt6-5compat
+  - [curl](https://github.com/curl/curl)
+  - [fmt](https://github.com/fmtlib/fmt) `>=8.0.0`
+  - [spdlog](https://github.com/gabime/spdlog) `>=1.9.0`
+  - [grpc](https://github.com/grpc/grpc)
+  - [protobuf](https://github.com/protocolbuffers/protobuf)
+  - [nlohmann-json](https://github.com/nlohmann/json)
+  - [zxing-cpp](https://github.com/nu-book/zxing-cpp) `>=1.2.0`
 
 - 编译环境需求
-    - GCC / Clang / MSVC (Support C++ 20 Standard)
-    - Ninja (optional)
-    - Git
-    - CMake
-    - GoogleTest
+  - GCC / Clang / MSVC (Support C++ 20 Standard)
+  - Ninja (optional)
+  - Git
+  - CMake
+  - GoogleTest
 
 ### Linux
 
@@ -71,11 +96,12 @@ $ cmake .. \
     -DFETCH_SINGLE_APPLICATION=OFF \
     -GNinja
 ```
+
 ### Windows
 
 #### vcpkg
 
-为了编译 `ACross`,  Qt 的版本不应低于 `v6.2.0`. 然而，若你实用官方的安装器，那你至少需要 `v6.2.1` 因为它缺少 `qt6-5compat` 组件。
+为了编译 `ACross`, Qt 的版本不应低于 `v6.2.0`. 然而，若你实用官方的安装器，那你至少需要 `v6.2.1` 因为它缺少 `qt6-5compat` 组件。
 
 以下指令均在 PowerShell 中执行。
 
@@ -123,6 +149,7 @@ $ cmake --build .
 ```
 
 #### MSYS2 + MINGW
+
 **推荐方法**
 
 按照官方教程，利用 [ACross PKGBUILD](https://github.com/ArkToria/ACross/blob/master/pkgbuild/msys2/PKGBUILD) 编译 MSYS2 包.
