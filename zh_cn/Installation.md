@@ -38,6 +38,49 @@ $ gpg --verify <across_release_package>.sig
 
 ![verify from gui](/Installation/verify_from_gui.png)
 
+### Windows
+
+#### Scoop
+
+```powershell
+scoop bucket add arktoria https://github.com/ArkToria/scoop-bucket
+scoop install arktoria/across
+```
+
+`scoop` 包里面提供了一个简单的配置，并且如果修改设置页面中的任何内容都能生成一份完整的配置。软件会被安装在你的用户目录下：`~/scoop/bucket/across/`。
+
+#### Pacman & MSYS2
+
+从 Action 或者 Release 页面下载 `mingw-w64-x86_64` 包。对于从 Action 下载的包来说，你需要先用 `unzip` 解压。
+
+```bash
+pacman -U *.pkg.tar.zst
+```
+
+#### Portable
+
+下载并解压即可使用
+
+### Linux
+
+#### Pacman & ArchLinux
+
+你可以从 [ArchLinuxCN](https://wiki.archlinux.org/title/Unofficial_user_repositories#archlinuxcn) 源下载并安装。
+
+对于 `Manjaro` 或者其他基于 Arch Linux 的发行版用户来说，我们推荐你从 [AUR](https://aur.archlinux.org/packages/across/) 自行构建软件包。
+
+#### Nix & NixOS
+
+我们提供了 [Flakes](https://github.com/ArkToria/ACross/blob/master/flake.nix) 支持。
+
+### MacOS
+
+#### AppImage & Others
+
+我们的 AppImage 从 Debian 中构建，但由于其上游并未提供最新版的 Qt 和一些其他的依赖，所以可能会存在一些问题，如输入法无法使用。
+
+在你启动 AppImage 之前，你需要进行 `chmod u+x <AppImage File>` 操作，给它可执行权限，并且需要确保你的 `glibc` 版本符合最低需求。
+
 ## 从源代码编译
 
 ### 依赖

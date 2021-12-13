@@ -77,7 +77,7 @@ We provide [Flakes](https://github.com/ArkToria/ACross/blob/master/flake.nix) su
 
 Our AppImage is built from Debian, because there has no the latest Qt or other dependence packages in the upstream, so there may be some problems, such as the input method is broken.
 
-Before you start the AppImage, you should `chmod u+x <AppImage File>` to make it executable and make sour you `glibc` version matchs the minimum requirements.
+Before you start the AppImage, you should `chmod u+x <AppImage File>` to make it executable and make sure you `glibc` version matchs the minimum requirements.
 
 ### MacOS
 
