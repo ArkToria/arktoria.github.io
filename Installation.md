@@ -38,6 +38,49 @@ $ gpg --verify <across_release_package>.sig
 
 ![verify from gui](/Installation/verify_from_gui.png)
 
+### Windows
+
+#### Scoop
+
+```powershell
+scoop bucket add arktoria https://github.com/ArkToria/scoop-bucket
+scoop install arktoria/across
+```
+
+The `scoop` package provides a simple configuration, and making any modifications in the setting page can generate the full one. The software will be installed in your user directory `~/scoop/bucket/across/`.
+
+#### Pacman & MSYS2
+
+Download the `mingw-w64-x86_64` package from action or release page. For the action artifacts package, you should `unzip` at first.
+
+```bash
+pacman -U *.pkg.tar.zst
+```
+
+#### Portable
+
+Download and `unzip` to use it.
+
+### Linux
+
+#### Pacman & ArchLinux
+
+You can install the package from [ArchLinuxCN](https://wiki.archlinux.org/title/Unofficial_user_repositories#archlinuxcn) repositories.
+
+For `Manjaro` or other based on the Arch Linux operating system user, We recommend to build the package from [AUR](https://aur.archlinux.org/packages/across/) by yourself.
+
+#### Nix & NixOS
+
+We provide [Flakes](https://github.com/ArkToria/ACross/blob/master/flake.nix) support.
+
+#### AppImage & Others
+
+Our AppImage is built from Debian, because there has no the latest Qt or other dependence packages in the upstream, so there may be some problems, such as the input method is broken.
+
+Before you start the AppImage, you should `chmod u+x <AppImage File>` to make it executable and make sour you `glibc` version matchs the minimum requirements.
+
+### MacOS
+
 ## Build From Source
 
 ### Dependencies
